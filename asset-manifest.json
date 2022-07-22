@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.0c02594d.css",
-    "main.js": "/static/js/main.63f401fd.js",
+    "main.css": "/static/css/main.8991ef1e.css",
+    "main.js": "/static/js/main.d5937627.js",
     "static/media/header-bg.jpg": "/static/media/header-bg.0fdbd6014406d857335b.jpg",
     "static/media/1.jpg": "/static/media/1.a2f0c8be351fad30d0b1.jpg",
     "static/media/map-image.png": "/static/media/map-image.3cd6dd9808474f6ed762.png",
@@ -20,11 +20,11 @@
     "static/media/facebook.svg": "/static/media/facebook.ad73d91704ace39780f2c217b84d569f.svg",
     "static/media/ibm.svg": "/static/media/ibm.03f09965c1094fe7a3b1756fe8e36fb2.svg",
     "index.html": "/index.html",
-    "main.0c02594d.css.map": "/static/css/main.0c02594d.css.map",
-    "main.63f401fd.js.map": "/static/js/main.63f401fd.js.map"
+    "main.8991ef1e.css.map": "/static/css/main.8991ef1e.css.map",
+    "main.d5937627.js.map": "/static/js/main.d5937627.js.map"
   },
   "entrypoints": [
-    "static/css/main.0c02594d.css",
-    "static/js/main.63f401fd.js"
+    "static/css/main.8991ef1e.css",
+    "static/js/main.d5937627.js"
   ]
 }
