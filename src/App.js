@@ -6,8 +6,6 @@ import ListServices from './components/ListServices';
 import Products from './components/Products';
 import Contact from './components/Contact';
 import About from './components/About';
-
-// import Navbar from './components/Navbar';
 import Home from './components/Home';
 import Layout from './components/Layout';
 import NoPage from './components/NoPage';
