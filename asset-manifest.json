@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/static/css/main.0c02594d.css",
+    "main.js": "/static/js/main.63f401fd.js",
+    "static/media/header-bg.jpg": "/static/media/header-bg.0fdbd6014406d857335b.jpg",
+    "static/media/1.jpg": "/static/media/1.a2f0c8be351fad30d0b1.jpg",
+    "static/media/map-image.png": "/static/media/map-image.3cd6dd9808474f6ed762.png",
+    "static/media/7.jpg": "/static/media/7.f3adc546c7c788c1b60a.jpg",
+    "static/media/9.jpg": "/static/media/9.91f22ccd038c63f07026.jpg",
+    "static/media/5.jpg": "/static/media/5.4aa0855827d6a8d150c3.jpg",
+    "static/media/8.jpg": "/static/media/8.00fc623f8f52a3b8156e.jpg",
+    "static/media/2.jpg": "/static/media/2.9a43a1bf4fb6dd63ea89.jpg",
+    "static/media/costas.jpg": "/static/media/costas.978d7c2c8b6c5e48edf5.jpg",
+    "static/media/6.jpg": "/static/media/6.de1a6535bdddfd038e19.jpg",
+    "static/media/4.jpg": "/static/media/4.cedf50d7a753bc0f5d1b.jpg",
+    "static/media/3.jpg": "/static/media/3.3ef8d3c3e6193f4f98d5.jpg",
+    "static/media/exel-tech.jpg": "/static/media/exel-tech.2bdb222a9be179f35d0f.jpg",
+    "static/media/microsoft.svg": "/static/media/microsoft.1351b872036d06dc317e6473a02c8cb2.svg",
+    "static/media/google.svg": "/static/media/google.18e374630f64c0a5de2f9039e05cab40.svg",
+    "static/media/facebook.svg": "/static/media/facebook.ad73d91704ace39780f2c217b84d569f.svg",
+    "static/media/ibm.svg": "/static/media/ibm.03f09965c1094fe7a3b1756fe8e36fb2.svg",
+    "index.html": "/index.html",
+    "main.0c02594d.css.map": "/static/css/main.0c02594d.css.map",
+    "main.63f401fd.js.map": "/static/js/main.63f401fd.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0c02594d.css",
+    "static/js/main.63f401fd.js"
+  ]
+}
