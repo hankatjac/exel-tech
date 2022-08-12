@@ -29,7 +29,7 @@ const Footer = () => {
                   </a>
                 </li>
               </ul>
-              <span className="copyright">Copyright &copy; Exel-Tech 2022</span>
+              <span className="copyright">Copyright &copy; Exel-Tech {new Date().getFullYear()}</span>
             </div>
             <div className="col-md-4">
               <div >
@@ -54,12 +54,12 @@ const Footer = () => {
                 <li className="">
                   <a href="#">Products</a>
                 </li>
-                <li className="">
+                {/* <li className="">
                   <a href="#">Technology</a>
                 </li>
                 <li className="">
                   <a href="#">Partner</a>
-                </li>
+                </li> */}
               </ul>
             </div>
           </div>

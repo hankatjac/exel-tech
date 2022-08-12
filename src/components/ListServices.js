@@ -5,7 +5,7 @@ const ListServices = ({ ourServices }) => {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
-  const [modalData, setModalData] = useState(ourServices[1]);
+  const [modalData, setModalData] = useState(ourServices[0]);
 
 
   // useEffect(onClick, [])

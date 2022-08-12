@@ -1,7 +1,7 @@
 import React from 'react';
-import facebook from '../assets/img/logos/facebook.svg';
+import supermicro from '../assets/img/logos/supermicro.svg';
 import google from '../assets/img/logos/google.svg';
-import ibm from '../assets/img/logos/ibm.svg';
+import hammondmfg from '../assets/img/logos/hammondmfg.svg';
 import microsoft from '../assets/img/logos/microsoft.svg';
 
 const Clients = () => {
@@ -11,7 +11,7 @@ const Clients = () => {
       <div className="row">
         <div className="col-md-3 col-sm-6">
           <a href="#">
-            <img className="img-fluid d-block mx-auto" src={facebook} alt="" />
+            <img className="img-fluid d-block mx-auto" src={supermicro} alt="" />
           </a>
         </div>
         <div className="col-md-3 col-sm-6">
@@ -21,7 +21,7 @@ const Clients = () => {
         </div>
         <div className="col-md-3 col-sm-6">
           <a href="#">
-            <img className="img-fluid d-block mx-auto" src={ibm} alt="" />
+            <img className="img-fluid d-block mx-auto" src={hammondmfg} alt="" />
           </a>
         </div>
         <div className="col-md-3 col-sm-6">
