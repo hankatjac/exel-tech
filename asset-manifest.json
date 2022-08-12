@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.8991ef1e.css",
-    "main.js": "/static/js/main.d5937627.js",
+    "main.css": "/static/css/main.2ae2a304.css",
+    "main.js": "/static/js/main.f62d542b.js",
     "static/media/header-bg.jpg": "/static/media/header-bg.0fdbd6014406d857335b.jpg",
     "static/media/1.jpg": "/static/media/1.a2f0c8be351fad30d0b1.jpg",
     "static/media/map-image.png": "/static/media/map-image.3cd6dd9808474f6ed762.png",
@@ -15,16 +15,16 @@
     "static/media/4.jpg": "/static/media/4.cedf50d7a753bc0f5d1b.jpg",
     "static/media/3.jpg": "/static/media/3.3ef8d3c3e6193f4f98d5.jpg",
     "static/media/exel-tech.jpg": "/static/media/exel-tech.2bdb222a9be179f35d0f.jpg",
+    "static/media/hammondmfg.svg": "/static/media/hammondmfg.131c911c8ed82be3e11789b9a6fb1966.svg",
+    "static/media/supermicro.svg": "/static/media/supermicro.db92e311b5cf6a3b034b88e9ba362e5a.svg",
     "static/media/microsoft.svg": "/static/media/microsoft.1351b872036d06dc317e6473a02c8cb2.svg",
     "static/media/google.svg": "/static/media/google.18e374630f64c0a5de2f9039e05cab40.svg",
-    "static/media/facebook.svg": "/static/media/facebook.ad73d91704ace39780f2c217b84d569f.svg",
-    "static/media/ibm.svg": "/static/media/ibm.03f09965c1094fe7a3b1756fe8e36fb2.svg",
     "index.html": "/index.html",
-    "main.8991ef1e.css.map": "/static/css/main.8991ef1e.css.map",
-    "main.d5937627.js.map": "/static/js/main.d5937627.js.map"
+    "main.2ae2a304.css.map": "/static/css/main.2ae2a304.css.map",
+    "main.f62d542b.js.map": "/static/js/main.f62d542b.js.map"
   },
   "entrypoints": [
-    "static/css/main.8991ef1e.css",
-    "static/js/main.d5937627.js"
+    "static/css/main.2ae2a304.css",
+    "static/js/main.f62d542b.js"
   ]
 }
