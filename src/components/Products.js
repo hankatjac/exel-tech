@@ -19,7 +19,7 @@ return (
             const { id, productName, image } = product;
 
             return (
-              <div className="col-md-4" dey={id}>
+              <div className="col-md-4" key={id}>
                 <span className="fa-stack fa-4x">
                   <i className="fas fa-circle fa-stack-2x text-primary"></i>
                   <i className="fas fa-shopping-cart fa-stack-1x fa-inverse"></i>

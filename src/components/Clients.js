@@ -1,6 +1,6 @@
 import React from 'react';
 import supermicro from '../assets/img/logos/supermicro.svg';
-import google from '../assets/img/logos/google.svg';
+import intel from '../assets/img/logos/intel.svg';
 import hammondmfg from '../assets/img/logos/hammondmfg.svg';
 import microsoft from '../assets/img/logos/microsoft.svg';
 
@@ -10,22 +10,22 @@ const Clients = () => {
     <div className="container">
       <div className="row">
         <div className="col-md-3 col-sm-6">
-          <a href="#">
+          <a href="https://www.supermicro.com/">
             <img className="img-fluid d-block mx-auto" src={supermicro} alt="" />
           </a>
         </div>
         <div className="col-md-3 col-sm-6">
-          <a href="#">
-            <img className="img-fluid d-block mx-auto" src={google} alt="" />
+          <a href="https://www.intel.ca/">
+            <img className="img-fluid d-block mx-auto" src={intel} alt="" />
           </a>
         </div>
         <div className="col-md-3 col-sm-6">
-          <a href="#">
+          <a href="https://www.hammfg.com/">
             <img className="img-fluid d-block mx-auto" src={hammondmfg} alt="" />
           </a>
         </div>
         <div className="col-md-3 col-sm-6">
-          <a href="#">
+          <a href="https://www.microsoft.com/">
             <img className="img-fluid d-block mx-auto" src={microsoft} alt="" />
           </a>
         </div>
