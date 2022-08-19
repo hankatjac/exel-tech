@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.2ae2a304.css",
-    "main.js": "/static/js/main.78cbc825.js",
+    "main.js": "/static/js/main.9ec698ef.js",
     "static/media/header-bg.jpg": "/static/media/header-bg.0fdbd6014406d857335b.jpg",
     "static/media/1.jpg": "/static/media/1.a2f0c8be351fad30d0b1.jpg",
     "static/media/map-image.png": "/static/media/map-image.3cd6dd9808474f6ed762.png",
@@ -16,15 +16,15 @@
     "static/media/3.jpg": "/static/media/3.3ef8d3c3e6193f4f98d5.jpg",
     "static/media/exel-tech.jpg": "/static/media/exel-tech.2bdb222a9be179f35d0f.jpg",
     "static/media/hammondmfg.svg": "/static/media/hammondmfg.131c911c8ed82be3e11789b9a6fb1966.svg",
-    "static/media/supermicro.svg": "/static/media/supermicro.5a43e1f6013c3765532818e5b5aa07f0.svg",
+    "static/media/supermicro.svg": "/static/media/supermicro.3e69aedad59f6ee28c3ca39527153225.svg",
     "static/media/microsoft.svg": "/static/media/microsoft.2bcfd3d1191ab64ef20fc32f42d030ba.svg",
     "index.html": "/index.html",
     "static/media/intel.svg": "/static/media/intel.f1cad5a8ce16a7b8eefbd2d923df2af6.svg",
     "main.2ae2a304.css.map": "/static/css/main.2ae2a304.css.map",
-    "main.78cbc825.js.map": "/static/js/main.78cbc825.js.map"
+    "main.9ec698ef.js.map": "/static/js/main.9ec698ef.js.map"
   },
   "entrypoints": [
     "static/css/main.2ae2a304.css",
-    "static/js/main.78cbc825.js"
+    "static/js/main.9ec698ef.js"
   ]
 }
