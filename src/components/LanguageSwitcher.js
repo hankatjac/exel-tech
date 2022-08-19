@@ -14,10 +14,10 @@ const LanguageSwitcher = () => {
 
     <div>
       {
-        buttonText == 'en' ? <button className="btn btn-primary" type="button" onClick={() => changeLanguage('fr')}>
-          FR
-        </button> : <button className="btn btn-primary" type="button" onClick={() => changeLanguage('en')}>
+        buttonText == 'fr' ? <button className="btn btn-primary" type="button" onClick={() => changeLanguage('en')}>
           EN
+        </button> : <button className="btn btn-primary" type="button" onClick={() => changeLanguage('fr')}>
+          FR
         </button>
       }
 
@@ -27,13 +27,6 @@ const LanguageSwitcher = () => {
     //   <div>
     //     Current Language: {i18n.language}
     //   </div>
-    //   <button className="btn btn-primary" type="button" onClick={() => changeLanguage('fr')}>
-    //     FR
-    //   </button>
-    //   <button className="btn btn-primary" type="button" onClick={() => changeLanguage('en')}>
-    //     EN
-    //   </button>
-    // </div>
 
 
   )
