@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
 const Footer = () => {
@@ -31,8 +32,8 @@ const Footer = () => {
                 </a>
               </li>
             </ul>
-            <span className="copyright">{t('Copyright') }&copy;<span style ={{color: 'white'}}>H.R&amp;</span>Exel-Tech {new Date().getFullYear()}</span>
-            
+            <span className="copyright">{t('Copyright')}&copy;<span style={{ color: 'white' }}>H.R&amp;</span>Exel-Tech {new Date().getFullYear()}</span>
+
           </div>
           <div className="col-md-4">
             <div >
@@ -52,17 +53,17 @@ const Footer = () => {
             <h2>{t('OTHERS')}</h2>
             <ul className="list-inline quicklinks">
               <li>
-                <a href="/services">Services</a>
+                <Link to="/services">Services</Link>
               </li>
               <li>
-                <a href="/products">{t('Products')}</a>
+                <Link to="/products">{t('Products')}</Link>
               </li>
               <li>
-                  <a href="/about">{t('About')}</a>
-                </li>
-                <li>
-                  <a href="/contact">{t('Contact')}</a>
-                </li>
+                <Link to="/about">{t('About')}</Link>
+              </li>
+              <li>
+                <Link to="/contact">{t('Contact')}</Link>
+              </li>
             </ul>
           </div>
         </div>
