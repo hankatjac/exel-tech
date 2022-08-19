@@ -35,12 +35,13 @@
   "Contact-subheading": "For your convenience you can always send us a message at any time through the following form and we will contact you as soon as possible.",
   "Your name": "Your name *",
   "Your email": "Your email *",
-  "Your phone": "Your phone *",
+  "Your phone": "Your phone 000-000-0000",
   "Your message": "Your message *",
   "Please enter your name.": "Please enter your name.",
   "Please enter your email.": "Please enter your email.",
   "Please enter a valid email.": "Please enter your valid email.",
   "Please enter your phone number.": "Please enter your phone number.",
+  "Please match requested format.": "Please match request format.",
   "Please enter a message.": "Please enter your message.",
   "Max length exceeded.": "Max length 100 exceeded."
 }

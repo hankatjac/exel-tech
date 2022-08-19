@@ -35,12 +35,13 @@
   "Contact-subheading": "Pour votre commodité, vous pouvez toujours nous envoyer un message à tout moment via le formulaire suivant et nous vous contacterons dans les plus brefs délais.",
   "Your name": "Votre nom *",
   "Your email": "Votre courriel *",
-  "Your phone": "Votre téléphone *",
+  "Your phone": "Votre téléphone 000-000-0000",
   "Your message": "Votre message *",
   "Please enter your name.": "Veuillez entrez votre nom.",
   "Please enter your email.": "Veuillez entrez votre courriel.",
   "Please enter a valid email.": "Veuillez entrer votre courriel valide.",
   "Please enter your phone number.": "Veuillez entrer votre numéro de téléphone.",
+  "Please match requested format.": "Veuillez respecter le format demandé.",
   "Please enter a message.": "Veuillez entrer votre message.",
   "Max length exceeded.": "Longueur max 100 dépassée."
 }

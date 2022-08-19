@@ -5,7 +5,7 @@ import { useForm } from "react-hook-form";
 const Contact = () => {
   const [status, setStatus] = useState("Submit");
   const { t } = useTranslation();
-  const { register, handleSubmit, formState: { errors } , reset} = useForm();
+  const { register, handleSubmit, formState: { errors }, reset } = useForm();
 
   const submitForm = async (data) => {
     // e.preventDefault();
@@ -62,14 +62,18 @@ const Contact = () => {
                   </div>
 
                   <div className="form-group">
-                    <input className="form-control" id="phone" type="number" placeholder={t('Your phone')}
+                    <input className="form-control" id="phone" type="tel" placeholder={t('Your phone')}
                       {...register("phoneNumber",
-                        { required: true, minLength: 6, maxLength: 12 })
+                        {
+                          required: true,
+                          pattern: {
+                            value: /[0-9]{3}-[0-9]{3}-[0-9]{4}/,
+                            message: "Please match requested format.",
+                          }
+                        })
                       } />
                     {errors.phoneNumber && errors.phoneNumber.type === 'required' && <p className="help-block text-danger">{t('Please enter your phone number.')}</p>}
-                    {errors.phoneNumber && errors.phoneNumber.type === 'minLength' && <p className="help-block text-danger">{t('Min 6 numbers required.')}</p>}
-                    {errors.phoneNumber && errors.phoneNumber.type === 'maxLength' && <p className="help-block text-danger">{t('Max 12 numbers.')}</p>}
-
+                    {errors.phoneNumber && errors.phoneNumber.type === 'pattern' && <p className="help-block text-danger">{t(errors.phoneNumber.message)}</p>}
                   </div>
                 </div>
 
@@ -79,7 +83,6 @@ const Contact = () => {
                       {...register("message",
                         { required: true, maxLength: 100 })
                       } />
-
                     {errors.message && errors.message.type === 'required' && <p className="help-block text-danger">{t('Please enter a message.')}</p>}
                     {errors.message && errors.message.type === 'maxLength' && <p className="help-block text-danger">{t('Max length exceeded.')}</p>}
                   </div>
