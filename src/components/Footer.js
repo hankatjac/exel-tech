@@ -1,6 +1,8 @@
-import React from 'react'
+import React from 'react';
+import { useTranslation } from "react-i18next";
 
 const Footer = () => {
+  const { t } = useTranslation();
   return (
     <footer className="footer">
       <div className="container">
@@ -29,37 +31,38 @@ const Footer = () => {
                 </a>
               </li>
             </ul>
-            <span className="copyright">Copyright &copy; Exel-Tech {new Date().getFullYear()}</span>
+            <span className="copyright">{t('Copyright') }&copy;<span style ={{color: 'white'}}>H.R&amp;</span>Exel-Tech {new Date().getFullYear()}</span>
+            
           </div>
           <div className="col-md-4">
             <div >
-              <h2 className='' key="location">LOCATION</h2>
+              <h2 key="location">{t('LOCATION')}</h2>
               <ul className='list-inline'>
-                <li><a href="#">Phone: (1) 514-335-1300</a></li>
-                <li><a href="#">Fax: (1) 514-333-1084</a></li>
-                <li><a href="#">e-mail: info@exel-tech.com</a></li>
-                <li><a href="#">4455 Boulevard Poirier, Saint-Laurent
+                <li>Phone: (1) 514-335-1300</li>
+                <li>Fax: (1) 514-333-1084</li>
+                <li><a href="mailto:info@exel-tech.com">Email: info@exel-tech.com</a></li>
+                <li><a href="https://goo.gl/maps/PTd5PmZoU5rKqg6u7">Address: 4455 Boulevard Poirier, Saint-Laurent
                   QC H4R-2A4 Canada</a></li>
-                <li><a href="#">Monday to Friday 09:00 AM - 05:00 PM</a></li>
+                <li>{t('Monday to Friday')} 09:00 AM - 05:00 PM</li>
               </ul>
             </div>
 
           </div>
           <div className="col-md-4">
-            <h2>OTHERS</h2>
+            <h2>{t('OTHERS')}</h2>
             <ul className="list-inline quicklinks">
-              <li className="">
-                <a href="#">Services</a>
+              <li>
+                <a href="/services">Services</a>
               </li>
-              <li className="">
-                <a href="#">Products</a>
+              <li>
+                <a href="/products">{t('Products')}</a>
               </li>
-              {/* <li className="">
-                  <a href="#">Technology</a>
+              <li>
+                  <a href="/about">{t('About')}</a>
                 </li>
-                <li className="">
-                  <a href="#">Partner</a>
-                </li> */}
+                <li>
+                  <a href="/contact">{t('Contact')}</a>
+                </li>
             </ul>
           </div>
         </div>

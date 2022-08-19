@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React, {useState } from 'react';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import data from './components/data';
-import productData from './productData';
+import data from './components/serviceData';
+import productData from './components/productData';
 import ListServices from './components/ListServices';
 import Products from './components/Products';
 import Contact from './components/Contact';
@@ -11,17 +11,15 @@ import Layout from './components/Layout';
 import NoPage from './components/NoPage';
 
 
+
 function App() {
   const [ourServices, setourServices] = useState(data);
   const [products, setProducts] = useState(productData);
 
   return (
-
     <BrowserRouter>
-
       <Routes>
         <Route path="/" element={<Layout />}>
-
           <Route index element={<Home />} />
           <Route path="products" element={<Products products={products} />} />
           <Route path="services" element={<ListServices ourServices={ourServices} />} />
@@ -31,17 +29,6 @@ function App() {
         </Route>
       </Routes>
     </BrowserRouter>
-
-    // <div className="App">
-    //   <Home />
-    //   <Navbar />
-    //   <Products products={products} />
-    //   <ListServices ourServices={ourServices} />
-    //   <About />
-    //   <Clients />
-    //   <Contact />
-    //   <Footer />
-    // </div>
   );
 }
 

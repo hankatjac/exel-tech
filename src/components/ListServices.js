@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import { Modal, Button } from "react-bootstrap";
+import { useTranslation } from "react-i18next";
 
 const ListServices = ({ ourServices }) => {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   const [modalData, setModalData] = useState(ourServices[0]);
+  const { t } = useTranslation();
 
-
-  // useEffect(onClick, [])
 
   return (
 
@@ -18,7 +18,7 @@ const ListServices = ({ ourServices }) => {
           <div className="row">
             <div className="col-lg-12 text-center">
               <h2 className="section-heading text-uppercase">Services</h2>
-              <h3 className="section-subheading text-muted">Exel-Tech provides a wide variety of computer services.</h3>
+              <h3 className="section-subheading text-muted">{t('Service-subheading')}</h3>
             </div>
           </div>
           <div className="row">{
@@ -37,7 +37,7 @@ const ListServices = ({ ourServices }) => {
                     {/* </a> */}
                     <div className="portfolio-caption">
 
-                      <p className="text-muted">{description}</p>
+                      <p className="text-muted">{t(description)}</p>
                     </div>
                   </div>
                 </div>
@@ -54,8 +54,8 @@ const ListServices = ({ ourServices }) => {
 
           <Modal.Title>
             <div>
-              <h2 className="text-uppercase">{modalData.description}</h2>
-              <p className="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+              <h2 className="text-uppercase">{t(modalData.description)}</h2>
+              {/* <p className="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p> */}
             </div>
 
           </Modal.Title>
