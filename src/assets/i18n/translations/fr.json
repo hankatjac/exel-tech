@@ -32,6 +32,7 @@
   "About-intro": "Le service et le support client personnalisé ont toujours été l'objectif principal d'Exel-Tech, qui a été lancé par M. Costas Psyharis en 1987. Tous les membres de notre personnel informatique professionnel sont techniquement formés pour répondre aux besoins informatiques personnels de chaque client.",
   "How we define personalized services": "Comment nous définissons les services personnalisés",
   "About-body": "Notre philosophie chez EXEL-TECH est de traiter nos clients comme nous aimerions être traités nous-mêmes. Nos clients sont comme des amis à qui nous offrons nos meilleures opinions et suggestions sur une variété de produits et services dans le but de répondre à leurs besoins et aux besoins du monde informatique en constante croissance. Les membres de notre personnel reçoivent en permanence une formation sur les nouveaux produits, services et technologies changeantes au fur et à mesure qu'ils se présentent à nous. Avec la collaboration d'Intel, de Supermicro et de Microsoft, Exel-Tech s'est implantée sur de nouveaux marchés plus vastes, qui comprennent les secteurs des gouvernements provincial et fédéral. En tant que premier fournisseur Intel Premier de matériel de serveur, Exel-Tech est conçu pour répondre aux besoins de nos clients en temps opportun. Nous élargissons constamment nos connaissances pour répondre aux demandes et mettre en œuvre les meilleures solutions pour répondre aux besoins de nos clients.",
+  "submit": "soumettre",
   "Contact-subheading": "Pour votre commodité, vous pouvez toujours nous envoyer un message à tout moment via le formulaire suivant et nous vous contacterons dans les plus brefs délais.",
   "Your name": "Votre nom *",
   "Your email": "Votre courriel *",
@@ -41,7 +42,7 @@
   "Please enter your email.": "Veuillez entrez votre courriel.",
   "Please enter a valid email.": "Veuillez entrer votre courriel valide.",
   "Please enter your phone number.": "Veuillez entrer votre numéro de téléphone.",
-  "Please match requested format.": "Veuillez respecter le format demandé.",
+  "Please match requested format 000-000-0000.": "Veuillez respecter le format demandé 000-000-0000.",
   "Please enter a message.": "Veuillez entrer votre message.",
   "Max length exceeded.": "Longueur max 100 dépassée."
 }

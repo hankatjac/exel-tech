@@ -3,13 +3,13 @@ import { useTranslation } from "react-i18next";
 import { useForm } from "react-hook-form";
 
 const Contact = () => {
-  const [status, setStatus] = useState("Submit");
-  const { t } = useTranslation();
+  const [status, setStatus] = useState("submit");
+  const { t, i18n } = useTranslation();
   const { register, handleSubmit, formState: { errors }, reset } = useForm();
 
   const submitForm = async (data) => {
     // e.preventDefault();
-    setStatus("Sending...");
+    i18n.language === "fr" ? setStatus("Evoyer...") : setStatus("Sending...")
     // const { name, email, phone, message } = e.target.elements;
     // let details = {
     //   name: name.value,
@@ -24,7 +24,7 @@ const Contact = () => {
       },
       body: JSON.stringify(data),
     });
-    setStatus("Submit");
+    setStatus("submit");
     let result = await response.json();
     alert(result.status);
     reset();
@@ -68,7 +68,7 @@ const Contact = () => {
                           required: true,
                           pattern: {
                             value: /[0-9]{3}-[0-9]{3}-[0-9]{4}/,
-                            message: "Please match requested format.",
+                            message: "Please match requested format 000-000-0000.",
                           }
                         })
                       } />
@@ -90,7 +90,7 @@ const Contact = () => {
                 <div className="clearfix"></div>
                 <div className="col-lg-12 text-center">
                   <div id="success"></div>
-                  <button id="sendMessageButton" className="btn btn-primary btn-xl text-uppercase" type="submit">{status}</button>
+                  <button id="sendMessageButton" className="btn btn-primary btn-xl text-uppercase" type="submit">{t(status)}</button>
                 </div>
               </div>
             </form>
