@@ -114,6 +114,10 @@ img::-moz-selection {
     background-color: #dde5ee
 }
 
+.navbar-expand-lg .navbar-collapse {
+    justify-content: flex-end;
+}
+
 #mainNav .navbar-toggler {
     font-size: 12px;
     right: 0;
@@ -318,6 +322,11 @@ img::-moz-selection {
     #portfolio .portfolio-item {
         margin: 0 0 30px
     }
+
+}
+
+.modal-header {
+    align-items: flex-start;
 }
 
 .portfolio-modal .modal-dialog {
