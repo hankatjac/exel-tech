@@ -4,8 +4,9 @@ import logo from '../assets/img/logos/exel-tech.jpg'
 import LanguageSwitcher from './LanguageSwitcher';
 import { useTranslation } from "react-i18next";
 
-const Navbar = () => {
+const Navbar = ({user, logOut}) => {
   const { t } = useTranslation();
+
   return (
     <nav className="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
       <div className="container">
@@ -33,12 +34,33 @@ const Navbar = () => {
               <Link to="contact" className="nav-link js-scroll-trigger">{t('Contact')}</Link>
             </li>
             <li className="nav-item">
+              <Link to="dashboard" className="nav-link js-scroll-trigger">{t('product inquiry')}</Link>
+            </li>
+
+            {user ? (
+              <li className="nav-item">
+                <a href="/login" className="nav-link js-scroll-trigger" onClick={logOut}>
+                  {t('logOut')}
+                </a>
+              </li>
+
+            ) : (
+              <li className="nav-item">
+                <Link to="login" className="nav-link js-scroll-trigger">
+                  {t('login')}
+                </Link>
+              </li>
+
+            )}
+
+
+            <li className="nav-item">
               <LanguageSwitcher />
             </li>
           </ul>
         </div>
       </div>
-    </nav>
+    </nav >
   )
 }
 

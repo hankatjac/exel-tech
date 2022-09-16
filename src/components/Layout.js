@@ -4,10 +4,10 @@ import Clients from './Clients';
 import Footer from './Footer';
 import Navbar from './Navbar';
 
-const Layout = () => {
+const Layout = ({user, logOut}) => {
     return (
         <>
-            <Navbar />
+            <Navbar user={user} logOut={logOut}/>
             <Outlet />
             <Clients />
             <Footer />

@@ -63,7 +63,7 @@ const ListServices = ({ ourServices }) => {
 
         <Modal.Footer>
           <Button variant="secondary" onClick={() => setShow(false)}>
-            Close
+            {t('Close')}
           </Button>
           {/* <Button variant="primary" onClick={() => setShow(false)}>
             Save Changes

@@ -8,6 +8,8 @@ const Contact = () => {
   const { register, handleSubmit, formState: { errors }, reset } = useForm();
 
   const submitForm = async (data) => {
+
+    // console.log(data)
     // e.preventDefault();
     i18n.language === "fr" ? setStatus("Evoyer...") : setStatus("Sending...")
     // const { name, email, phone, message } = e.target.elements;
@@ -41,7 +43,7 @@ const Contact = () => {
         </div>
         <div className="row">
           <div className="col-lg-12">
-            <form onSubmit={handleSubmit(submitForm)} id="contactForm" name="sentMessage" novalidate="novalidate">
+            <form onSubmit={handleSubmit(submitForm)} id="contactForm" name="sentMessage" >
               <div className="row">
                 <div className="col-md-6">
                   <div className="form-group">
@@ -55,15 +57,15 @@ const Contact = () => {
                       {...register("email",
                         {
                           required: true,
-                          pattern: /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/
+                          pattern: /^\w+@[a-zA-Z_-]+?\.[a-zA-Z]{2,3}$/
                         })} />
                     {errors.email && errors.email.type === 'required' && <p className="help-block text-danger">{t('Please enter your email.')}</p>}
                     {errors.email && errors.email.type === 'pattern' && <p className="help-block text-danger">{t('Please enter a valid email')}</p>}
                   </div>
 
                   <div className="form-group">
-                    <input className="form-control" id="phone" type="tel" placeholder={t('Your phone')}
-                      {...register("phoneNumber",
+                    <input className="form-control" id="phone" type="text" placeholder={t('Your phone')}
+                      {...register("phone",
                         {
                           required: true,
                           pattern: {
@@ -72,8 +74,8 @@ const Contact = () => {
                           }
                         })
                       } />
-                    {errors.phoneNumber && errors.phoneNumber.type === 'required' && <p className="help-block text-danger">{t('Please enter your phone number.')}</p>}
-                    {errors.phoneNumber && errors.phoneNumber.type === 'pattern' && <p className="help-block text-danger">{t(errors.phoneNumber.message)}</p>}
+                    {errors.phone && errors.phone.type === 'required' && <p className="help-block text-danger">{t('Please enter your phone number.')}</p>}
+                    {errors.phone && errors.phone.type === 'pattern' && <p className="help-block text-danger">{t(errors.phone.message)}</p>}
                   </div>
                 </div>
 
