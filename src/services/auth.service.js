@@ -1,7 +1,7 @@
 import axios from "axios";
 
 // const API_URL = "http://localhost:8080/api/auth/";
-const API_URL = "https://exeltechcontactformbackend.herokuapp.com/api/auth/";
+const API_URL = "https://exeltechdatabase.herokuapp.com/api/auth/";
 
 
 
