@@ -19,7 +19,7 @@ const Contact = () => {
     //   phone: phone.value,
     //   message: message.value,
     // };
-    let response = await fetch("https://exeltechcontactformbackend.herokuapp.com/contact", {
+    let response = await fetch("https://exeltechcontactform.herokuapp.com/contact", {
       method: "POST",
       headers: {
         "Content-Type": "application/json;charset=utf-8",
