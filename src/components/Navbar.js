@@ -39,7 +39,7 @@ const Navbar = ({user, logOut}) => {
 
             {user ? (
               <li className="nav-item">
-                <a href="/login" className="nav-link js-scroll-trigger" onClick={logOut}>
+                <a href="#/login" className="nav-link js-scroll-trigger" onClick={logOut}>
                   {t('logOut')}
                 </a>
               </li>
