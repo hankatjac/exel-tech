@@ -120,6 +120,12 @@ const Dashboard = () => {
                                 </div>
                                 <div>
                                     <label>
+                                        <strong>Customer Name:</strong>
+                                    </label>{" "}
+                                    {currentProduct['Customer Name']}
+                                </div>
+                                <div>
+                                    <label>
                                         <strong>Case Brand:</strong>
                                     </label>{" "}
                                     {currentProduct['Case Brand']}
