@@ -53,11 +53,12 @@ const Dashboard = () => {
         ProductDataService.getBySystemSN(searchSystemSN)
             .then(response => {
                 setCurrentProduct(response.data);
+                setLoding(false)
                 // console.log(response.data);
             })
             .catch(e => {
                 setCurrentProduct(null)
-                setLoding(false)
+                setLoding(false);    
                 console.log(e);
             });
     };
