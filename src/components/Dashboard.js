@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 // import { Navigate } from "react-router-dom";
 import { useNavigate } from 'react-router-dom';
 import ProductDataService from "../services/ProductService";
+import { ThreeDots } from  'react-loader-spinner';
 
 const Dashboard = () => {
     // const [authenticated, setauthenticated] = useState(false);
@@ -18,6 +19,9 @@ const Dashboard = () => {
     const [currentProduct, setCurrentProduct] = useState(null);
 
     const [searchSystemSN, setSearchSystemSN] = useState("");
+    const [loading, setLoding] = useState(false)
+
+
 
     const navigate = useNavigate();
     const { t } = useTranslation();
@@ -44,6 +48,7 @@ const Dashboard = () => {
     };
 
     const findBySystemSN = (e) => {
+        setLoding(true)
         e.preventDefault()
         ProductDataService.getBySystemSN(searchSystemSN)
             .then(response => {
@@ -52,6 +57,7 @@ const Dashboard = () => {
             })
             .catch(e => {
                 setCurrentProduct(null)
+                setLoding(false)
                 console.log(e);
             });
     };
@@ -92,6 +98,7 @@ const Dashboard = () => {
                                     <button
                                         className="btn btn-outline-secondary"
                                         type="submit"
+                                        disabled={loading}
                                     >
                                         {t('Search')}
                                     </button>
@@ -100,7 +107,19 @@ const Dashboard = () => {
                             </div>
                         </form>
                     </div>
-
+                    {loading ? (<div className="text-center">
+                        <ThreeDots
+                            height="80"
+                            width="80"
+                            radius="9"
+                            color="#4fa94d"
+                            ariaLabel="three-dots-loading"
+                            wrapperStyle={{}}
+                            wrapperClassName=""
+                            visible={true}
+                        />
+                        {/* <h2 className="section-heading text-uppercase">loading</h2> */}
+                    </div>) : (
                     <div className="col-md-6">
 
                         {currentProduct ? (
@@ -289,7 +308,7 @@ const Dashboard = () => {
                             </div>
                         )}
 
-                    </div>
+                    </div>)}
 
 
 
