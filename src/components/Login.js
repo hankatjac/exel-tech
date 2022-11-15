@@ -3,29 +3,30 @@ import { useTranslation } from "react-i18next";
 import { useForm } from "react-hook-form";
 import { useNavigate } from 'react-router-dom';
 import AuthService from "../services/auth.service";
-
+import { ColorRing } from 'react-loader-spinner'
 
 const Login = () => {
   const nav = useNavigate();
   const { t } = useTranslation();
   const { register, handleSubmit, formState: { errors }} = useForm();
 
-  // const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState("");
 
   const submitForm = async (data) => {
-
+    setLoading(true);
     setMessage("");
-  
+
     AuthService.login(data.username, data.password).then(
       () => {
         nav('/dashboard');
         window.location.reload();
+        setLoading(false);
       },
       (error) => {
         const resMessage = (error.response && error.response.data && error.response.data.message) || error.message || error.toString();
 
-        // setLoading(false);
+        setLoading(false);
         setMessage(resMessage);
       }
     );
@@ -37,45 +38,58 @@ const Login = () => {
 
   return (
     <section className="page-section" id="login">
-     
-          <div className="col-lg-6 m-auto">
-            <div className="text-center">
-              <h2 className="section-heading text-uppercase">{t('login')}</h2>
-            </div>
 
-            <img
-              src="//ssl.gstatic.com/accounts/ui/avatar_2x.png"
-              alt="profile-img"
-              className="profile-img-card"
-            />
+      <div className="col-lg-6 m-auto">
+        <div className="text-center">
+          <h2 className="section-heading text-uppercase">{t('login')}</h2>
+        </div>
 
-            <form onSubmit={handleSubmit(submitForm)} id="loginForm" name="sentMessage">
+        <img
+          src="//ssl.gstatic.com/accounts/ui/avatar_2x.png"
+          alt="profile-img"
+          className="profile-img-card"
+        />
 
-              <div className="form-group">
-                <label>{t('Username')}</label>
-                <input className="form-control" name="username" type="text"
-                  {...register("username", { required: true, maxLength: 10 })} />
-                {errors.username && <p className="help-block text-danger">{t('Please enter your name.')}</p>}
-              </div>
+        <form onSubmit={handleSubmit(submitForm)} id="loginForm" name="sentMessage">
 
-              <div className="form-group">
-                <label>{t('Password')}</label>
-                <input name="password" type="password"
-                  {...register('password', { required: true })}
-                  className={`form-control ${errors.password ? 'is-invalid' : ''}`}
-                />
-                {errors.password && <p className="help-block text-danger">Please enter your password</p>}
-              </div>
-
-              <div className="clearfix"></div>
-              <div className="col-lg-12 text-center">
-                <div id="success">{message}</div>
-                <button id="sendMessageButton" className="btn btn-primary btn-xl text-uppercase" type="submit">{t('login')}</button>
-              </div>
-
-            </form>
+          <div className="form-group">
+            <label>{t('Username')}</label>
+            <input className="form-control" name="username" type="text"
+              {...register("username", { required: true, maxLength: 10 })} />
+            {errors.username && <p className="help-block text-danger">{t('Please enter your name.')}</p>}
           </div>
-        
+
+          <div className="form-group">
+            <label>{t('Password')}</label>
+            <input name="password" type="password"
+              {...register('password', { required: true })}
+              className={`form-control ${errors.password ? 'is-invalid' : ''}`}
+            />
+            {errors.password && <p className="help-block text-danger">Please enter your password</p>}
+          </div>
+
+          <div className="clearfix"></div>
+          <div className="col-lg-12 text-center">
+            <div id="success">{message}</div>
+            {loading ? (
+              <ColorRing
+                visible={true}
+                height="80"
+                width="80"
+                ariaLabel="blocks-loading"
+                wrapperStyle={{}}
+                wrapperClass="blocks-wrapper"
+                colors={['#e15b64', '#f47e60', '#f8b26a', '#abbd81', '#849b87']}
+              />
+            ) : (
+              <button id="sendMessageButton" className="btn btn-primary btn-xl text-uppercase" type="submit">{t('login')} </button>
+
+            )}
+          </div>
+
+        </form>
+      </div>
+
     </section>
   )
 }
