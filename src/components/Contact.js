@@ -4,6 +4,7 @@ import { useForm } from "react-hook-form";
 
 const Contact = () => {
   const [status, setStatus] = useState("submit");
+  const [loading, setLoading] = useState(false);
   const { t, i18n } = useTranslation();
   const { register, handleSubmit, formState: { errors }, reset } = useForm();
 
@@ -11,7 +12,8 @@ const Contact = () => {
 
     // console.log(data)
     // e.preventDefault();
-    i18n.language === "fr" ? setStatus("Evoyer...") : setStatus("Sending...")
+    i18n.language === "fr" ? setStatus("Evoyer...") : setStatus("Sending...");
+    setLoading(true);
     // const { name, email, phone, message } = e.target.elements;
     // let details = {
     //   name: name.value,
@@ -28,6 +30,7 @@ const Contact = () => {
     });
     setStatus("submit");
     let result = await response.json();
+    setLoading(false);
     alert(result.status);
     reset();
   };
@@ -92,7 +95,7 @@ const Contact = () => {
                 <div className="clearfix"></div>
                 <div className="col-lg-12 text-center">
                   <div id="success"></div>
-                  <button id="sendMessageButton" className="btn btn-primary btn-xl text-uppercase" type="submit">{t(status)}</button>
+                  <button id="sendMessageButton" disabled={loading} className="btn btn-primary btn-xl text-uppercase" type="submit">{t(status)}</button>
                 </div>
               </div>
             </form>
