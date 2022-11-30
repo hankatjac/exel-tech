@@ -158,6 +158,30 @@ const Dashboard = () => {
                                 </div>
                                 <div>
                                     <label>
+                                        <strong>CPU P/N #1:</strong>
+                                    </label>{" "}
+                                    {currentProduct['CPU P/N #1']}
+                                </div>
+                                <div>
+                                    <label>
+                                        <strong>CPU P/N #2:</strong>
+                                    </label>{" "}
+                                    {currentProduct['CPU P/N #2']}
+                                </div>
+                                <div>
+                                    <label>
+                                        <strong>Case S/N:</strong>
+                                    </label>{" "}
+                                    {currentProduct['Case S/N']}
+                                </div>
+                                <div>
+                                    <label>
+                                        <strong>Mother Board S/N:</strong>
+                                    </label>{" "}
+                                    {currentProduct['Mother Board S/N']}
+                                </div>
+                                <div>
+                                    <label>
                                         <strong>Hard Drives:</strong>
                                     </label>{" "}
                                     {currentProduct['Hard Drives']}
