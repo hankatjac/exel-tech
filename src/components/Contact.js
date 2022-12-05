@@ -22,7 +22,7 @@ const Contact = () => {
     //   message: message.value,
     // };
     // let response = await fetch("https://exeltechcontactform.herokuapp.com/contact", {
-    let response = await fetch("https://long-jade-crocodile-coat.cyclic.app", {
+    let response = await fetch("https://long-jade-crocodile-coat.cyclic.app/contact", {
       method: "POST",
       headers: {
         "Content-Type": "application/json;charset=utf-8",

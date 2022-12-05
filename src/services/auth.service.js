@@ -2,7 +2,7 @@ import axios from "axios";
 
 // const API_URL = "http://localhost:8080/api/auth/";
 // const API_URL = "https://exeltechdatabase.herokuapp.com/api/auth/";
-const API_URL = "https://panicky-erin-mittens.cyclic.app/";
+const API_URL = "https://panicky-erin-mittens.cyclic.app/api/auth/";
 
 
 
