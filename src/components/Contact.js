@@ -21,7 +21,8 @@ const Contact = () => {
     //   phone: phone.value,
     //   message: message.value,
     // };
-    let response = await fetch("https://exeltechcontactform.herokuapp.com/contact", {
+    // let response = await fetch("https://exeltechcontactform.herokuapp.com/contact", {
+    let response = await fetch("https://long-jade-crocodile-coat.cyclic.app", {
       method: "POST",
       headers: {
         "Content-Type": "application/json;charset=utf-8",
