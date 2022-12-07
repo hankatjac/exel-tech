@@ -13,7 +13,7 @@ export function SocketProvider({ id, children }) {
 
   useEffect(() => {
     const newSocket = io(
-      'https://chat-backend-theta.vercel.app',
+      'https://acidic-victorious-wire.glitch.me/',
       { query: { id } }
     )
     // console.log(newSocket)
