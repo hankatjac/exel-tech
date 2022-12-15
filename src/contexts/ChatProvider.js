@@ -9,13 +9,17 @@ const ChatContext = React.createContext()
 const ChatProvider = ({ id, children }) => {
   const [conversations, setConversations] = useLocalStorage('conversations', [])
   const [selectedConversationIndex, setSelectedConversationIndex] = useState(0)
+
+  const [welcome, setWelcome] = useState('')
+  const [message, setMessage] = useState('')
+
   const socket = useSocket()
 
   function createConversation() {
     setConversations(() => {
       return [
         {
-          recipients: ["Admin"], messages: []
+          recipients: ["Admin"], messages: [{sender:"Admin", text: `Hello ${id}, welcome to exel-tech customer service. Can I help you?`}]
         }
       ]
     })
@@ -57,6 +61,22 @@ const ChatProvider = ({ id, children }) => {
 
     socket.on('receive-message', addMessageToConversation)
 
+    socket.on('admin-connected', () => {
+      setWelcome('customer service online')
+    })
+    socket.on('admin-disconnected', () => {
+      setWelcome('customer service offline')
+    })
+  
+
+    socket.on('user-connected', id => {
+      setMessage(`${id} connected`); 
+    })
+    socket.on('user-disconnected', id => {
+      setMessage(`${id} disconnected`); 
+    })
+
+
     return () => socket.off('receive-message')
   }, [socket, addMessageToConversation])
 
@@ -88,6 +108,8 @@ const ChatProvider = ({ id, children }) => {
   })
 
   const value = {
+    welcome,
+    message,
     conversations: formattedConversations,
     selectedConversation: formattedConversations[selectedConversationIndex],
     sendMessage,

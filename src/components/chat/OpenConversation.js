@@ -10,7 +10,7 @@ const OpenConversation = () => {
       node.scrollIntoView({ smooth: true })
     }
   }, [])
-  const { sendMessage, selectedConversation } = useConversations()
+  const { welcome, message, sendMessage, selectedConversation } = useConversations()
 
   function handleSubmit(e) {
     e.preventDefault()
@@ -27,7 +27,7 @@ const OpenConversation = () => {
 
     <div className="d-flex flex-column flex-grow-1">
       <div className="flex-grow-1 overflow-auto">
-        <div className="d-flex flex-column align-items-start justify-content-end px-3">
+        <div className="d-flex flex-column align-items-start justify-content-end px-3 text-break">
           {selectedConversation.messages.map((message, index) => {
             const lastMessage = selectedConversation.messages.length - 1 === index
             return (
@@ -46,6 +46,10 @@ const OpenConversation = () => {
               </div>
             )
           })}
+
+          <span className="text-center bg-danger">{message}</span>
+          <span className="text-center bg-danger">{welcome}</span>
+        
         </div>
       </div>
       <Form onSubmit={handleSubmit}>
@@ -58,9 +62,9 @@ const OpenConversation = () => {
               onChange={e => setText(e.target.value)}
               style={{ height: '30px', resize: 'none' }}
             />
-           
-              <Button type="submit">Send</Button>
-           
+
+            <Button type="submit">Send</Button>
+
           </InputGroup>
         </Form.Group>
       </Form>
