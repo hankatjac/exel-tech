@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/exel-tech/static/css/main.d6659334.css",
-    "main.js": "/exel-tech/static/js/main.d8b697dd.js",
+    "main.js": "/exel-tech/static/js/main.a9186bd9.js",
     "static/media/header-bg.jpg": "/exel-tech/static/media/header-bg.0fdbd6014406d857335b.jpg",
     "static/media/1.jpg": "/exel-tech/static/media/1.a2f0c8be351fad30d0b1.jpg",
     "static/media/map-image.png": "/exel-tech/static/media/map-image.3cd6dd9808474f6ed762.png",
@@ -21,10 +21,10 @@
     "index.html": "/exel-tech/index.html",
     "static/media/intel.svg": "/exel-tech/static/media/intel.f1cad5a8ce16a7b8eefbd2d923df2af6.svg",
     "main.d6659334.css.map": "/exel-tech/static/css/main.d6659334.css.map",
-    "main.d8b697dd.js.map": "/exel-tech/static/js/main.d8b697dd.js.map"
+    "main.a9186bd9.js.map": "/exel-tech/static/js/main.a9186bd9.js.map"
   },
   "entrypoints": [
     "static/css/main.d6659334.css",
-    "static/js/main.d8b697dd.js"
+    "static/js/main.a9186bd9.js"
   ]
 }
