@@ -1,5 +1,6 @@
-import React, { useState } from 'react'
-import Conversations from './Conversations'
+import React, { useState } from 'react';
+import Conversations from './Conversations';
+import { Button } from 'react-bootstrap';
 
 
 const Sidebar = ({ id }) => {
