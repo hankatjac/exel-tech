@@ -47,8 +47,8 @@ const OpenConversation = () => {
             )
           })}
 
-          <span className="text-center bg-danger">{message}</span>
-          <span className="text-center bg-danger">{welcome}</span>
+          <span className="bg-danger">{message}</span>
+          <span className={`${welcome == 'customer service online'? "bg-info":'bg-danger'}`}>{welcome}</span>
         
         </div>
       </div>

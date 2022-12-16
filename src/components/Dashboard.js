@@ -21,8 +21,6 @@ const Dashboard = () => {
     const [searchSystemSN, setSearchSystemSN] = useState("");
     const [loading, setLoding] = useState(false)
 
-
-
     const navigate = useNavigate();
     const { t } = useTranslation();
 
@@ -83,7 +81,7 @@ const Dashboard = () => {
                         <h2 className="section-heading text-uppercase">{t('product inquiry')}</h2>
                     </div>
 
-                    <div className="col-md-8 mx-auto">
+                    <div className="col-md-6 mx-auto">
                         <form onSubmit={findBySystemSN}>
                         <label>{t('Please enter a product serial number')}</label>
                             <div className="input-group mb-3">
