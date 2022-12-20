@@ -10,7 +10,7 @@ export default function Login({ onIdSubmit }) {
     // console.log(idRef.current.value)
  
     
-    if ((idRef.current.value).toUpperCase() == "ADMIN") {
+    if ((idRef.current.value).trim().toUpperCase() == "ADMIN") {
 
       let psw = prompt("Please enter password:");
       if (psw == '123456') {
@@ -37,7 +37,7 @@ else
       <Form onSubmit={handleSubmit} className="w-100">
 
         <Form.Group>
-          <Form.Label>Enter Your Name</Form.Label>
+          <Form.Label>Please Enter Your Name</Form.Label>
           <Form.Control type="text" ref={idRef} required />
         </Form.Group>
         <Button type="submit" className="mr-2">Go</Button>

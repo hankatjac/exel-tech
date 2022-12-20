@@ -23,7 +23,7 @@ const ListServices = ({ ourServices }) => {
             ourServices.map((ourService) => {
               const { id, description, image } = ourService;
               return (
-                <div className="col-md-4 col-sm-6" key={id} onClick={() => {
+                <div className="col-md-4 col-sm-6" style={{ cursor: 'pointer' }}  key={id} onClick={() => {
                   setModalData(ourService);
                   setShow(true);
                 }}>

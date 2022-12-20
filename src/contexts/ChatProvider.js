@@ -19,7 +19,7 @@ const ChatProvider = ({ id, children }) => {
     setConversations(() => {
       return [
         {
-          recipients: ["Admin"], messages: [{sender:"Admin", text: `Hello ${id}! Welcome to exel-tech customer service. Our customer service oppening hours from 1:30PM to 4:30PM, Moday to Fridday. Please note we cannot receive message beyond those hours.`}]
+          recipients: ["Admin"], messages: [{sender:"Admin", text: `Hello ${id}! Welcome to Exel-Tech customer service. Our customer service oppening hours from 1:30PM to 4:30PM, Moday to Friday. Please note we cannot receive message beyond those hours.`}]
         }
       ]
     })

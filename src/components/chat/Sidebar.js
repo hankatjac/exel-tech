@@ -14,7 +14,7 @@ const Sidebar = ({ id }) => {
     <div style={{ width: '80px' }} className="d-flex justify-content-between flex-column">
       <Conversations />
       <div className="p-2 border-top border-right small">
-        <Button variant="outline-primary" size="sm" onClick={clearStorage}>LOGIN OUT</Button>
+        <Button variant="outline-primary" size="sm" onClick={clearStorage}>LOGOUT</Button>
         Your Id: <span className="text-muted">{id}</span>
       </div>
     </div>
