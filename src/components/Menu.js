@@ -37,7 +37,7 @@ const Menu = ({ user, logOut }) => {
               to="contact" >{t('contact')}
             </Nav.Link>
 
-            <Nav.Link as={Link} eventKey="7"
+            <Nav.Link as={Link} eventKey="6"
               to="dashboard" >{t('product inquiry')}
             </Nav.Link>
           </Nav>
@@ -45,23 +45,21 @@ const Menu = ({ user, logOut }) => {
           <Nav>
             {user ? (
 
-              <Nav.Link as={Link} eventKey="8"
+              <Nav.Link as={Link} eventKey="7" className='btn btn-secondary'
                 to="/login"  onClick={logOut}>
                 {t('logOut')}
               </Nav.Link>
 
             ) : (
-              <Nav.Link as={Link} eventKey="9" className='btn btn-primary'
+              <Nav.Link as={Link} eventKey="8" className='btn btn-primary'
                 to="login" >
                 {t('login')}
               </Nav.Link>
-
-
             )}
           </Nav>
 
           <Nav>
-            <Nav.Link eventKey="10" >
+            <Nav.Link eventKey="9" >
               <LanguageSwitcher />
             </Nav.Link>
 

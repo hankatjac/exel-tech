@@ -14,7 +14,7 @@ const Home = () => {
         <div className="col-md-6 intro-text">
           <div className="intro-heading text-uppercase">{t('find the best solution for your it problems')}</div>
           <div className="intro-lead-in">{t('We are a team of IT professionals dedicated to customer satisfaction')}</div>
-          <Link to="services" className="btn btn-primary btn-xl text-uppercase js-scroll-trigger">{t('Learn More')}</Link>
+          <Link to="services" className="btn btn-danger btn-xl text-uppercase js-scroll-trigger">{t('Learn More')}</Link>
         </div>
      
         <div className="col-md-6 intro-text">

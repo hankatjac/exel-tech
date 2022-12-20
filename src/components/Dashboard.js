@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 // import { Navigate } from "react-router-dom";
 import { useNavigate } from 'react-router-dom';
 import ProductDataService from "../services/ProductService";
-import { ThreeDots } from  'react-loader-spinner';
+import { ThreeDots } from 'react-loader-spinner';
 
 const Dashboard = () => {
     // const [authenticated, setauthenticated] = useState(false);
@@ -56,7 +56,7 @@ const Dashboard = () => {
             })
             .catch(e => {
                 setCurrentProduct(null)
-                setLoding(false);    
+                setLoding(false);
                 console.log(e);
             });
     };
@@ -68,10 +68,10 @@ const Dashboard = () => {
 
                 <div className="text-center">
                     <p className="fs-3"> <span className="text-danger">Opps!</span>{t('login required.')}</p>
-                    
+
                     <p className="lead">
-                        {t('This page will redirect to login in 3 seconds.')}<br/>
-                        {t('Please use contact us form to request login information.')} 
+                        {t('This page will redirect to login in 3 seconds.')}<br />
+                        {t('Please use contact us form to request login information.')}
                     </p>
                 </div>
 
@@ -83,9 +83,9 @@ const Dashboard = () => {
 
                     <div className="col-md-6 mx-auto">
                         <form onSubmit={findBySystemSN}>
-                        <label>{t('Please enter a product serial number')}</label>
+                            <label>{t('Please enter a product serial number')}</label>
                             <div className="input-group mb-3">
-                               
+
                                 <input
                                     type="text"
                                     className="form-control"
@@ -98,6 +98,7 @@ const Dashboard = () => {
                                         className="btn btn-outline-secondary"
                                         type="submit"
                                         disabled={loading}
+                                        style={{ zIndex: 0 }}
                                     >
                                         {t('Search')}
                                     </button>
@@ -119,219 +120,219 @@ const Dashboard = () => {
                         />
                         {/* <h2 className="section-heading text-uppercase">loading</h2> */}
                     </div>) : (
-                    <div className="col-md-6">
+                        <div className="col-md-6">
 
-                        {currentProduct ? (
-                            <div>
-                                <h4>Product</h4>
+                            {currentProduct ? (
                                 <div>
-                                    <label>
-                                        <strong>System SN:</strong>
-                                    </label>{" "}
-                                    {currentProduct['System S/N']}
-                                </div>
-                                <div>
-                                    <label>
-                                        <strong>Date:</strong>
-                                    </label>{" "}
-                                    {currentProduct['Date']}
-                                </div>
-                                <div>
-                                    <label>
-                                        <strong>Customer Name:</strong>
-                                    </label>{" "}
-                                    {currentProduct['Customer Name']}
-                                </div>
-                                <div>
-                                    <label>
-                                        <strong>Case Brand:</strong>
-                                    </label>{" "}
-                                    {currentProduct['Case Brand']}
-                                </div>
-                                <div>
-                                    <label>
-                                        <strong>Motherboard Brand:</strong>
-                                    </label>{" "}
-                                    {currentProduct['Motherboard Brand']}
-                                </div>
-                                <div>
-                                    <label>
-                                        <strong>CPU P/N #1:</strong>
-                                    </label>{" "}
-                                    {currentProduct['CPU P/N #1']}
-                                </div>
-                                <div>
-                                    <label>
-                                        <strong>CPU P/N #2:</strong>
-                                    </label>{" "}
-                                    {currentProduct['CPU P/N #2']}
-                                </div>
-                                <div>
-                                    <label>
-                                        <strong>Case S/N:</strong>
-                                    </label>{" "}
-                                    {currentProduct['Case S/N']}
-                                </div>
-                                <div>
-                                    <label>
-                                        <strong>Mother Board S/N:</strong>
-                                    </label>{" "}
-                                    {currentProduct['Mother Board S/N']}
-                                </div>
-                                <div>
-                                    <label>
-                                        <strong>Hard Drives:</strong>
-                                    </label>{" "}
-                                    {currentProduct['Hard Drives']}
-                                </div>
-                                <div>
-                                    <label>
-                                        <strong>Hard Drive 1:</strong>
-                                    </label>{" "}
-                                    {currentProduct['Hard Drive 1']}
-                                </div>
-                                <div>
-                                    <label>
-                                        <strong>Hard Drive 2:</strong>
-                                    </label>{" "}
-                                    {currentProduct['Hard Drive 2']}
-                                </div>
-                                <div>
-                                    <label>
-                                        <strong>Hard Drive 3:</strong>
-                                    </label>{" "}
-                                    {currentProduct['Hard Drive 3']}
-                                </div>
-                                <div>
-                                    <label>
-                                        <strong>Hard Drive 4:</strong>
-                                    </label>{" "}
-                                    {currentProduct['Hard Drive 4']}
-                                </div>
-                                <div>
-                                    <label>
-                                        <strong>Backplane:</strong>
-                                    </label>{" "}
-                                    {currentProduct['Backplane']}
-                                </div>
-                                <div>
-                                    <label>
-                                        <strong>Backplane S/N:</strong>
-                                    </label>{" "}
-                                    {currentProduct['Backplane S/N']}
-                                </div>
-                                <div>
-                                    <label>
-                                        <strong>CD Brand:</strong>
-                                    </label>{" "}
-                                    {currentProduct['CD Brand']}
-                                </div>
-                                <div>
-                                    <label>
-                                        <strong>CD S/N:</strong>
-                                    </label>{" "}
-                                    {currentProduct['CD S/N']}
-                                </div>
-                                <div>
-                                    <label>
-                                        <strong>Riser Card:</strong>
-                                    </label>{" "}
-                                    {currentProduct['Riser Card']}
-                                </div>
-                                <div>
-                                    <label>
-                                        <strong>Riser Card S/N:</strong>
-                                    </label>{" "}
-                                    {currentProduct['Riser Card S/N']}
-                                </div>
-                                <div>
-                                    <label>
-                                        <strong>Video Adaptor:</strong>
-                                    </label>{" "}
-                                    {currentProduct['Video Adaptor']}
-                                </div>
-                                <div>
-                                    <label>
-                                        <strong>Video Adapter S/N:</strong>
-                                    </label>{" "}
-                                    {currentProduct['Video Adapter S/N']}
-                                </div>
-                                <div>
-                                    <label>
-                                        <strong>Power Supply #1 S/N:</strong>
-                                    </label>{" "}
-                                    {currentProduct['Power Supply #1 S/N']}
-                                </div>
-                                <div>
-                                    <label>
-                                        <strong>Power Supply #2 S/N:</strong>
-                                    </label>{" "}
-                                    {currentProduct['Power Supply #2 S/N']}
-                                </div>
-                                <div>
-                                    <label>
-                                        <strong>Power Supply #3 S/N:</strong>
-                                    </label>{" "}
-                                    {currentProduct['Power Supply #3 S/N']}
-                                </div>
-                                <div>
-                                    <label>
-                                        <strong>Raid/Network Card:</strong>
-                                    </label>{" "}
-                                    {currentProduct['Raid/Network Card']}
-                                </div>
-                                <div>
-                                    <label>
-                                        <strong>Raid/Network Card S/N:</strong>
-                                    </label>{" "}
-                                    {currentProduct['Raid/Network Card S/N']}
-                                </div>
-                                <div>
-                                    <label>
-                                        <strong>Other:</strong>
-                                    </label>{" "}
-                                    {currentProduct['Other']}
-                                </div>
-                                <div>
-                                    <label>
-                                        <strong>Other S/N:</strong>
-                                    </label>{" "}
-                                    {currentProduct['Other S/N']}
-                                </div>
-                                <div>
-                                    <label>
-                                        <strong>Memory 1:</strong>
-                                    </label>{" "}
-                                    {currentProduct['Memory 1']}
-                                </div>
-                                <div>
-                                    <label>
-                                        <strong>Memory 2:</strong>
-                                    </label>{" "}
-                                    {currentProduct['Memory 2']}
-                                </div>
-                                <div>
-                                    <label>
-                                        <strong>Memory 3:</strong>
-                                    </label>{" "}
-                                    {currentProduct['Memory 3']}
-                                </div>
-                                <div>
-                                    <label>
-                                        <strong>Service Notes:</strong>
-                                    </label>{" "}
-                                    {currentProduct['Service Notes']}
-                                </div>
+                                    <h4>Product</h4>
+                                    <div>
+                                        <label>
+                                            <strong>System SN:</strong>
+                                        </label>{" "}
+                                        {currentProduct['System S/N']}
+                                    </div>
+                                    <div>
+                                        <label>
+                                            <strong>Date:</strong>
+                                        </label>{" "}
+                                        {currentProduct['Date']}
+                                    </div>
+                                    <div>
+                                        <label>
+                                            <strong>Customer Name:</strong>
+                                        </label>{" "}
+                                        {currentProduct['Customer Name']}
+                                    </div>
+                                    <div>
+                                        <label>
+                                            <strong>Case Brand:</strong>
+                                        </label>{" "}
+                                        {currentProduct['Case Brand']}
+                                    </div>
+                                    <div>
+                                        <label>
+                                            <strong>Motherboard Brand:</strong>
+                                        </label>{" "}
+                                        {currentProduct['Motherboard Brand']}
+                                    </div>
+                                    <div>
+                                        <label>
+                                            <strong>CPU P/N #1:</strong>
+                                        </label>{" "}
+                                        {currentProduct['CPU P/N #1']}
+                                    </div>
+                                    <div>
+                                        <label>
+                                            <strong>CPU P/N #2:</strong>
+                                        </label>{" "}
+                                        {currentProduct['CPU P/N #2']}
+                                    </div>
+                                    <div>
+                                        <label>
+                                            <strong>Case S/N:</strong>
+                                        </label>{" "}
+                                        {currentProduct['Case S/N']}
+                                    </div>
+                                    <div>
+                                        <label>
+                                            <strong>Mother Board S/N:</strong>
+                                        </label>{" "}
+                                        {currentProduct['Mother Board S/N']}
+                                    </div>
+                                    <div>
+                                        <label>
+                                            <strong>Hard Drives:</strong>
+                                        </label>{" "}
+                                        {currentProduct['Hard Drives']}
+                                    </div>
+                                    <div>
+                                        <label>
+                                            <strong>Hard Drive 1:</strong>
+                                        </label>{" "}
+                                        {currentProduct['Hard Drive 1']}
+                                    </div>
+                                    <div>
+                                        <label>
+                                            <strong>Hard Drive 2:</strong>
+                                        </label>{" "}
+                                        {currentProduct['Hard Drive 2']}
+                                    </div>
+                                    <div>
+                                        <label>
+                                            <strong>Hard Drive 3:</strong>
+                                        </label>{" "}
+                                        {currentProduct['Hard Drive 3']}
+                                    </div>
+                                    <div>
+                                        <label>
+                                            <strong>Hard Drive 4:</strong>
+                                        </label>{" "}
+                                        {currentProduct['Hard Drive 4']}
+                                    </div>
+                                    <div>
+                                        <label>
+                                            <strong>Backplane:</strong>
+                                        </label>{" "}
+                                        {currentProduct['Backplane']}
+                                    </div>
+                                    <div>
+                                        <label>
+                                            <strong>Backplane S/N:</strong>
+                                        </label>{" "}
+                                        {currentProduct['Backplane S/N']}
+                                    </div>
+                                    <div>
+                                        <label>
+                                            <strong>CD Brand:</strong>
+                                        </label>{" "}
+                                        {currentProduct['CD Brand']}
+                                    </div>
+                                    <div>
+                                        <label>
+                                            <strong>CD S/N:</strong>
+                                        </label>{" "}
+                                        {currentProduct['CD S/N']}
+                                    </div>
+                                    <div>
+                                        <label>
+                                            <strong>Riser Card:</strong>
+                                        </label>{" "}
+                                        {currentProduct['Riser Card']}
+                                    </div>
+                                    <div>
+                                        <label>
+                                            <strong>Riser Card S/N:</strong>
+                                        </label>{" "}
+                                        {currentProduct['Riser Card S/N']}
+                                    </div>
+                                    <div>
+                                        <label>
+                                            <strong>Video Adaptor:</strong>
+                                        </label>{" "}
+                                        {currentProduct['Video Adaptor']}
+                                    </div>
+                                    <div>
+                                        <label>
+                                            <strong>Video Adapter S/N:</strong>
+                                        </label>{" "}
+                                        {currentProduct['Video Adapter S/N']}
+                                    </div>
+                                    <div>
+                                        <label>
+                                            <strong>Power Supply #1 S/N:</strong>
+                                        </label>{" "}
+                                        {currentProduct['Power Supply #1 S/N']}
+                                    </div>
+                                    <div>
+                                        <label>
+                                            <strong>Power Supply #2 S/N:</strong>
+                                        </label>{" "}
+                                        {currentProduct['Power Supply #2 S/N']}
+                                    </div>
+                                    <div>
+                                        <label>
+                                            <strong>Power Supply #3 S/N:</strong>
+                                        </label>{" "}
+                                        {currentProduct['Power Supply #3 S/N']}
+                                    </div>
+                                    <div>
+                                        <label>
+                                            <strong>Raid/Network Card:</strong>
+                                        </label>{" "}
+                                        {currentProduct['Raid/Network Card']}
+                                    </div>
+                                    <div>
+                                        <label>
+                                            <strong>Raid/Network Card S/N:</strong>
+                                        </label>{" "}
+                                        {currentProduct['Raid/Network Card S/N']}
+                                    </div>
+                                    <div>
+                                        <label>
+                                            <strong>Other:</strong>
+                                        </label>{" "}
+                                        {currentProduct['Other']}
+                                    </div>
+                                    <div>
+                                        <label>
+                                            <strong>Other S/N:</strong>
+                                        </label>{" "}
+                                        {currentProduct['Other S/N']}
+                                    </div>
+                                    <div>
+                                        <label>
+                                            <strong>Memory 1:</strong>
+                                        </label>{" "}
+                                        {currentProduct['Memory 1']}
+                                    </div>
+                                    <div>
+                                        <label>
+                                            <strong>Memory 2:</strong>
+                                        </label>{" "}
+                                        {currentProduct['Memory 2']}
+                                    </div>
+                                    <div>
+                                        <label>
+                                            <strong>Memory 3:</strong>
+                                        </label>{" "}
+                                        {currentProduct['Memory 3']}
+                                    </div>
+                                    <div>
+                                        <label>
+                                            <strong>Service Notes:</strong>
+                                        </label>{" "}
+                                        {currentProduct['Service Notes']}
+                                    </div>
 
-                            </div>
-                        ) : (
-                            <div>
-                                <br />
-                                <p>{t('No Product found')}</p>
-                            </div>
-                        )}
+                                </div>
+                            ) : (
+                                <div>
+                                    <br />
+                                    <p>{t('No Product found')}</p>
+                                </div>
+                            )}
 
-                    </div>)}
+                        </div>)}
 
 
 

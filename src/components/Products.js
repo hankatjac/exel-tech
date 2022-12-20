@@ -10,7 +10,7 @@ const Products = ({ products }) => {
       <div className="container">
         <div className="row">
           <div className="col-lg-12 text-center">
-            <h2 className="section-heading text-uppercase">{t('Products')}</h2>
+            <h2 className="section-heading text-uppercase">{t('products')}</h2>
             <h3 className="section-subheading text-muted">{t('Product-subheading')}</h3>
           </div>
         </div>
